@@ -5,7 +5,6 @@ body {
 
 .container {
     width: 560px;
-    height: 100vh;
     background-color: grey;
     margin: 0 auto;
 }

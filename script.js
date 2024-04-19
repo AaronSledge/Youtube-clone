@@ -36,13 +36,17 @@ $(document).ready(function() {
 
         $.each(data.items, function(i, item) {
             let thumb = item.snippet.thumbnails.medium.url;
+            let title = item.snippet.title;
+            let desc = item.snippet.description.substring(0, 100);
+            let vid = item.snippet.resourceId.videoId;
+
 
             $("main").append(`
-            <article>
+            <article class="item" data-key="${vid}">
                 <img src="${thumb}" alt="thumbnail" class="thumb">
                 <div class="details">
-                <h4>Title</h4>
-                <p>description</p>
+                <h4>${title}</h4>
+                <p>${desc}</p>
                 </div>
             </article>
         
@@ -53,4 +57,10 @@ $(document).ready(function() {
         
         
     }
+
+    $("main").on("click", "article", function() {
+        let id = $(this).attr("data-key");
+        mainVid(id);
+    });
+
 });
