@@ -1,0 +1,14 @@
+body {
+    background-color: #121212;
+}
+
+.container {
+    width: 560px;
+    height: 100vh;
+    background-color: grey;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 120px;
+}
