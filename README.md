@@ -1,2 +1,2 @@
 # youtube-clone
-Used javascript and api
+Practice using an api
